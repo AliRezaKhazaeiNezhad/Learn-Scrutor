@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LegoLearn.Server.Services;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace LegoLearn.Server.Controllers
@@ -7,11 +8,18 @@ namespace LegoLearn.Server.Controllers
     [ApiController]
     public class Home : ControllerBase
     {
-       
+        public Home(IServiceOne serviceOne)
+        {
+            _serviceOne = serviceOne;
+        }
+
+        public IServiceOne _serviceOne { get; set; }
+
+
         [HttpGet]
         public string Get()
         {
-            return "Hello World";
+            return _serviceOne.Print();
         }
 
     }
