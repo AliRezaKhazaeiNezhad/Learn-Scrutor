@@ -3,3 +3,6 @@
 
 # Ada Library Information
 *.ali
+/LegoLearn/LegoLearn.Server/bin/Debug/net6.0
+/LegoLearn/.vs/LegoLearn
+/LegoLearn/LegoLearn.Server/obj
