@@ -1,4 +1,6 @@
-﻿namespace LegoLearn.Server.Services
+﻿using LegoLearn.Server.RepositoryServices;
+
+namespace LegoLearn.Server.Services
 {
     public class ServiceOne : IServiceOne
     {

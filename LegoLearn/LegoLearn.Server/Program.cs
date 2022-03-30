@@ -43,20 +43,20 @@ builder.Services.AddControllers();
 /// <summary>
 /// جلسه پنجم
 /// </summary>
-builder.Services.Scan(current => current
-    .FromCallingAssembly()
-    .AddClasses(theClass => theClass.InExactNamespaceOf<LegoLearn.Server.Services.ServiceOne>())
-    .AsSelf()
-    .AsImplementedInterfaces()
-    .WithTransientLifetime()
+//builder.Services.Scan(current => current
+//    .FromCallingAssembly()
+//    .AddClasses(theClass => theClass.InExactNamespaceOf<LegoLearn.Server.Services.ServiceOne>())
+//    .AsSelf()
+//    .AsImplementedInterfaces()
+//    .WithTransientLifetime()
 
 
-    .FromCallingAssembly()
-    .AddClasses(theClass => theClass.InExactNamespaceOf<LegoLearn.Server.RepositoryServices.IServiceOne>())
-    .AsSelf()
-    .AsImplementedInterfaces()
-    .WithTransientLifetime()
-);
+//    .FromCallingAssembly()
+//    .AddClasses(theClass => theClass.InExactNamespaceOf<LegoLearn.Server.RepositoryServices.IServiceOne>())
+//    .AsSelf()
+//    .AsImplementedInterfaces()
+//    .WithTransientLifetime()
+//);
 
 var app = builder.Build();
 app.UseRouting();
