@@ -1,4 +1,6 @@
 ﻿using LegoLearn.Server.Services;
+using LegoLearn.Services;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -57,6 +59,26 @@ builder.Services.AddControllers();
 //    .AsImplementedInterfaces()
 //    .WithTransientLifetime()
 //);
+
+
+
+
+
+
+/// <summary>
+/// جلسه ششم
+/// </summary>
+//builder.Services.Scan(current => current
+//    .FromAssemblies(typeof(MyServiceOne).GetTypeInfo().Assembly)
+//    .AddClasses(theClass => theClass.InExactNamespaceOf<LegoLearn.Services.IMyServiceOne>())
+//    .AsSelf()
+//    .AsImplementedInterfaces()
+//    .WithTransientLifetime()
+//);
+
+
+
+
 
 var app = builder.Build();
 app.UseRouting();
