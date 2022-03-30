@@ -15,13 +15,25 @@ builder.Services.AddControllers();
 /// <summary>
 /// چلسه سوم
 /// </summary>
+//builder.Services.Scan(current => current
+//    .FromCallingAssembly()
+//    .AddClasses()
+
+//    .AsSelf()
+//    .AsImplementedInterfaces()
+
+//    .WithTransientLifetime()
+//);
+
+
+/// <summary>
+/// چلسه چهارم
+/// </summary>
 builder.Services.Scan(current => current
     .FromCallingAssembly()
-    .AddClasses()
-
+    .AddClasses(theClass => theClass.InExactNamespaceOf<LegoLearn.Server.Services.ServiceOne>())
     .AsSelf()
     .AsImplementedInterfaces()
-
     .WithTransientLifetime()
 );
 
