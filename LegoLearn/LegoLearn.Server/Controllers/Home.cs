@@ -8,18 +8,24 @@ namespace LegoLearn.Server.Controllers
     [ApiController]
     public class Home : ControllerBase
     {
-        public Home(IServiceOne serviceOne)
+        public Home(IServiceOne serviceOne, ServiceTwo serviceTwo)
         {
             _serviceOne = serviceOne;
+            _serviceTwo = serviceTwo;
         }
 
         public IServiceOne _serviceOne { get; set; }
+        public ServiceTwo _serviceTwo { get; set; }
 
 
         [HttpGet]
         public string Get()
         {
-            return _serviceOne.Print();
+            string message = "";
+            message = _serviceOne.Print("This is message one");
+            message = message + " | " + _serviceTwo.Print("This is message two");
+
+            return message;
         }
 
     }

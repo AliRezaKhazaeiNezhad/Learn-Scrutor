@@ -1,6 +1,6 @@
 ﻿namespace LegoLearn.Server.Services
 {
-    public class ServiceOne : IServiceOne
+    public class ServiceTwo
     {
         public string Print(string message)
         {

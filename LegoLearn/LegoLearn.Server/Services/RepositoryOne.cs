@@ -1,6 +1,6 @@
 ﻿namespace LegoLearn.Server.Services
 {
-    public class ServiceOne : IServiceOne
+    public class RepositoryOne<T> : IRepositoryOne<T> where T : class
     {
         public string Print(string message)
         {

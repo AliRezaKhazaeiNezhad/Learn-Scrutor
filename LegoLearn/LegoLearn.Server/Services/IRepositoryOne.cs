@@ -1,6 +1,6 @@
 ﻿namespace LegoLearn.Server.Services
 {
-    public interface IServiceOne
+    public interface IRepositoryOne<T> where T : class
     {
         string Print(string message);
     }
