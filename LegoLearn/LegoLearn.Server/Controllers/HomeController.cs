@@ -6,9 +6,9 @@ namespace LegoLearn.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Home : ControllerBase
+    public class HomeController : ControllerBase
     {
-        public Home(IServiceOne serviceOne, ServiceTwo serviceTwo)
+        public HomeController(IServiceOne serviceOne, ServiceTwo serviceTwo)
         {
             _serviceOne = serviceOne;
             _serviceTwo = serviceTwo;
@@ -22,6 +22,7 @@ namespace LegoLearn.Server.Controllers
         public string Get()
         {
             string message = "";
+
             message = _serviceOne.Print("This is message one");
             message = message + " | " + _serviceTwo.Print("This is message two");
 
