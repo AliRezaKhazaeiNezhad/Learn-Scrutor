@@ -1,4 +1,4 @@
-﻿namespace LegoLearn.Server.Services
+﻿namespace LegoLearn.Server.RepositoryServices
 {
     public interface IRepositoryOne<T> where T : class
     {
